@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Exam Timetable Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>School Exam Timetable Creator</h1>
+        <input type="text" id="schoolName" placeholder="Enter School Name">
+        <input type="text" id="testName" placeholder="Enter Test Name">
+
+        <h2>Timetable Details</h2>
+        <input type="text" id="day" placeholder="Day">
+        <input type="date" id="date">
+        <input type="text" id="subject" placeholder="Subject">
+        <input type="text" id="syllabus" placeholder="Syllabus">
+        
+        <button onclick="addTimetableEntry()">Add Entry</button>
+        <button onclick="generateTimetable()">Generate Timetable</button>
+
+        <div id="entriesContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

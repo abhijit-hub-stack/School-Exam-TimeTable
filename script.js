@@ -26,9 +26,10 @@ function addTimetableEntry() {
 function generateTimetable() {
     const schoolName = document.getElementById("schoolName").value;
     const testName = document.getElementById("testName").value;
+    const Class=document.getElementById("Class").value;
 
-    if (!schoolName || !testName || entries.length === 0) {
-        alert("Please enter school name, test name, and at least one entry.");
+    if (!schoolName || !testName || !Class || entries.length === 0) {
+        alert("Please enter school name, test name, Class , and at least one entry.");
         return;
     }
 
@@ -36,10 +37,10 @@ function generateTimetable() {
     newWindow.document.write(`
         <html>
         <head>
-            <title>${schoolName} - ${testName} Timetable</title>
+            <title>${schoolName} - ${testName} - ${Class} </title>
             <style>
-                body { font-family: Arial, sans-serif; text-align: center; }
-                table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                body { font-family: Arial, sans-serif; text-align: center; margin-top: 150;}
+                table { width: 90%; border-collapse: collapse; margin-top: 20px; margin-left:75px; margin-right:35px;}
                 th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
                 th { background-color: #f2f2f2; }
                 h1, h2 { margin: 0; }
@@ -48,7 +49,11 @@ function generateTimetable() {
         </head>
         <body>
             <h1>${schoolName}</h1>
-            <h2>${testName} Timetable</h2>
+            <h2>${testName} </h2>
+            <br>
+             <h2>Class :- ${Class} </h2>
+            <br>
+            <h1>Timetable</h1>
             <table>
                 <tr>
                     <th>Sr. No</th>
